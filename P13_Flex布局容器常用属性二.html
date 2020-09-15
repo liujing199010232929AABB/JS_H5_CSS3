@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>P13_Flex布局容器常用属性二</title>
+		<style type="text/css">
+			.box{
+                height:800px;
+                width:1000px;
+                border:1px solid #000;
+
+                display: flex;
+                flex-wrap:wrap;
+				/* justify-content: center; */
+                /* 定义多根轴线的对齐方式 */
+                align-content: space-around;
+            }
+            .box .item{
+                width:200px;
+                height:100px;
+                border:2px solid darkgoldenrod;
+                background-color:#0C7E83;
+                margin-right:10px;
+                margin-bottom:10px;
+                font-size:30px;
+                color:#fff;
+            }
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<div class="item">1</div>
+			<div class="item">2</div>
+			<div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+            <div class="item">6</div>
+            <div class="item">7</div>
+            <div class="item">8</div>
+            <div class="item">9</div>
+			<!-- <div class="item">2</div>
+			<div class="item">3</div> -->
+			
+		</div>
+	</body>
+</html>

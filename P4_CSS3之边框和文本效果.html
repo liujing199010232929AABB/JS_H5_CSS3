@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>P4_CSS3之边框和文本效果</title>
+		<style>
+			.box{
+				width: 200px;
+				height: 200px;
+				background-color: red;
+				margin: 100px auto;
+				/* 边框阴影 */
+				box-shadow: -5px -5px 10px 10px #008B8B;
+				border-radius: 10px 20px 30px 40px;
+			}
+			.box2{
+				width: 300px;
+				height: 300px;
+				margin: 100px auto;
+				border: 20px solid red;
+				/* 设置边框图片 */
+				border-image-source: url(images/border-img.jpeg);
+				border-image-slice: 15;
+                border-image-repeat: repeat;
+                /* round:默认 铺满 */
+
+			}
+			p{
+				width: 100px;
+				height: 40px;
+				/* font-size: 40px; */
+				line-height: 40px;
+				border: 1px solid red; 
+				/* text-shadow: 10px 20px 5px #f00 ; */
+				overflow: hidden;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box"></div>
+		
+		<div class="box2"></div>
+		<p>
+			假的很登记卡都不好好
+		</p>
+		
+		
+	</body>
+</html>

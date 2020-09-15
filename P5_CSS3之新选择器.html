@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>P5_CSS3之新选择器</title>
+        <style type="text/css">
+            /* 属性选择器 */
+			input[type=text]{
+				background-color: red;
+			}
+			a[data-title=hello]{
+				color: red;
+			}
+			/* 伪类 */
+			a:link{
+				
+			}
+			a:visited{
+				
+			}
+			a:hover{
+				
+			}
+			a:active{
+				
+            }
+            /* 在什么的后面添加内容 */
+			p::after{
+				content:'很帅';
+				color: red;
+			}
+			p::before{
+				content:'很帅';
+				color: green;
+			}
+			ul li:first-child{
+				color: red;
+			}
+			ul li:last-child{
+				color: yellowgreen;
+			}
+			ul li:nth-child(5){
+				color: #008B8B;
+			}
+		</style>
+	</head>
+	<body>
+		<a href="" data-title = 'hello'>hello world</a>
+		<input type="text">
+		<input type="password">
+		<input type="submit" />
+		<p>mjj</p>
+		<ul>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+		</ul>
+	</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>P12_Flex布局容器常用属性一</title>
+		<style>
+			.father{
+				width: 800px;
+				height: 800px;
+				border: 1px solid #000;
+				
+				/* 弹性盒 */
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				/* 决定主轴的方向 */
+				/*flex-direction: row;*/
+				/* flex-direction: row-reverse; */
+				/* flex-direction: column-reverse; */
+				
+				/* 决定了子项目的换行不换行 */
+				/* flex-wrap: nowrap; */
+				/* flex-wrap: wrap-reverse; */
+				/* 它是 flex-direction和flex-wrap的简写方式*/
+				/* flex-flow: column wrap; */
+				
+				/* 定义当前的项目在主轴上的排列方式 */
+				/* justify-content: flex-start;
+				justify-content: flex-end;
+				justify-content: center;
+				justify-content: space-between;
+				justify-content: space-around; */
+				/* 交叉轴的起点对齐 */
+				/* align-items: flex-start; */
+				/* 交叉轴的末点对齐 */
+				/* align-items: flex-end; */
+				/* 默认值 给项目不设置高度时观察 */
+				/* align-items: stretch; */
+				/* 交叉轴的中点对齐 */
+				/* align-items: center; */
+				/* align-items: baseline; */
+				/*flex-wrap: wrap;*/
+				/* align-content一定要结合flex-wrap：wrap一起使用 */
+				/*align-content: center;*/
+				
+				/*justify-content: center;*/
+
+			}
+			.father div{
+				width: 300px;
+				height: 300px;	
+				line-height: 200px;
+				font-size: 40px;
+				font-weight: 700;
+				color: #fff;
+				text-align: center;
+			}
+			.father .item:nth-child(1){
+				width: 100px;
+				line-height: 400px;
+				background-color: red;
+			}
+			.father .item:nth-child(2){
+				width: 200px;
+				line-height: 100px;
+				background-color: green;
+			}
+			.father .item:nth-child(3){
+				width: 100px;
+				background-color: yellow;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="father">
+			<div class="item">1</div>
+			<div class="item">2</div>
+			<div class="item">1</div>
+			<div class="item">1</div>
+			<!-- <div class="item">2</div>
+			<div class="item">3</div> -->
+			
+		</div>
+	</body>
+</html>

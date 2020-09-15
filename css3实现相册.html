@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>css3实现相册</title>
+        <style>
+            .father {
+                width: 200px;
+                height: 200px;
+                /* -webkit-perspective: 1000px; */
+                position: relative;
+                margin: 300px auto;
+                -webkit-transform-style: preserve-3d;
+                -webkit-transform: rotateX(13deg);
+                -webkit-animation: move 5s linear infinite;
+            }
+            .father .box {
+                width: 200px;
+                height: 200px;
+                /* background-color: #000000; */
+                border: 1px solid #666;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                margin-top: -100px;
+                margin-left: -100px;
+                opacity: 0.5;
+                -webkit-transition: all 3s ease;
+                
+            }
+            /* 前 */
+            .box:nth-child(1) {
+                -webkit-transform: translateZ(100px);
+            }
+            /* 后 */
+            .box:nth-child(2) {
+                -webkit-transform: rotateX(180deg) translateZ(100px);
+            }
+            /* 下 */
+            .box:nth-child(3) {
+                -webkit-transform: rotateX(-90deg) translateZ(100px);
+            }
+            /* 上 */
+            .box:nth-child(4) {
+                -webkit-transform: rotateX(90deg) translateZ(100px);
+            }
+            /* 左 */
+            .box:nth-child(5) {
+                -webkit-transform: rotateY(-90deg) translateZ(100px);
+            }
+            /* 右 */
+            .box:nth-child(6) {
+                -webkit-transform: rotateY(90deg) translateZ(100px);
+            }
+            .box:nth-child(1) {
+                background: url(images/nan_01.jpg) no-repeat 0 0;
+                
+                /* -webkit-transform: translateZ(100px); */
+            }
+            .box:nth-child(2) {
+                background: url(images/nan_02.jpg) no-repeat 0 0;
+            }
+            .box:nth-child(3) {
+                background: url(images/nan_03.jpg) no-repeat 0 0;
+            }
+            .box:nth-child(4) {
+                background: url(images/nan_04.jpg) no-repeat 0 0;
+            }
+            .box:nth-child(5) {
+                background: url(images/nan_05.jpg) no-repeat 0 0;
+                background-size: contain;
+            }
+            .box:nth-child(6) {
+                background: url(images/nan_06.jpg) no-repeat 0 0;
+                background-size: contain;
+            }
+            .father:hover .box:nth-child(1) {
+                -webkit-transform: translateZ(300px);
+                width: 400px;
+                height: 400px;
+                opacity: 0.8;
+                left: -100px;
+                top: -50px;
+            }
+            .father:hover .box:nth-child(2) {
+                -webkit-transform: rotateX(180deg) translateZ(300px);
+                width: 400px;
+                height: 400px;
+                opacity: 0.8;
+                left: -100px;
+                top: -50px;
+            }
+            .father:hover .box:nth-child(3) {
+                -webkit-transform: rotateX(-90deg) translateZ(300px);
+                width: 400px;
+                height: 400px;
+                opacity: 0.8;
+                left: -100px;
+                top: -50px;
+            }
+            .father:hover .box:nth-child(4) {
+                -webkit-transform: rotateX(90deg) translateZ(300px);
+                width: 400px;
+                height: 400px;
+                opacity: 0.8;
+                left: -100px;
+                top: -50px;
+            }
+            .father:hover .box:nth-child(5) {
+                -webkit-transform: rotateY(-90deg) translateZ(300px);
+                width: 400px;
+                height: 400px;
+                opacity: 0.8;
+                left: -100px;
+                top: -50px;
+            }
+            .father:hover .box:nth-child(6) {
+                -webkit-transform: rotateY(90deg) translateZ(300px);
+                width: 400px;
+                height: 400px;
+                opacity: 0.8;
+                left: -100px;
+                top: -50px;
+            }
+            @keyframes move {
+                from {
+                    transform: rotateX(30deg) rotateY(0deg);
+                }
+                to {
+                    transform: rotateX(30deg) rotateY(360deg);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="father">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>P8_transform3D转换</title>
+		<style>
+			.father{
+				width: 500px;
+				height: 500px;
+				margin: 100px auto;
+				/* 设置透视 实现3D效果必须的属性 距离越小 越明显 反之亦然 */
+				perspective: 800px;
+				perspective-origin: center center; 
+				/* 设置3D的效果 */
+				transform-style: preserve-3d;
+			}
+			.box{
+				width: 200px;
+				height: 200px;
+				background-color: red;
+				margin-bottom: 20px;
+				
+			}
+			.box:nth-child(1):hover{
+				  transform: rotateX(40deg) translateZ(100px); 
+				 /* transform: translateZ(100px);; */
+			}
+			.box:nth-child(2):hover{
+				 /* transform: rotateY(40deg); */
+				 transform: translateZ(-100px);;
+
+			}
+			.box:nth-child(3):hover{
+				 /* transform: rotateZ(40deg); */
+				 transform: translateZ(100px);;
+
+			}
+		</style>
+	</head>
+	<body>
+		<div class="father">
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+		</div>
+	</body>
+</html>
